@@ -1,0 +1,20 @@
+/* Estilos para dispositivos más pequeños (hasta 600px) */
+@media (max-width: 600px) {
+    .calculadora-grilla {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Estilos para dispositivos medianos (601px a 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .calculadora-grilla {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Estilos para dispositivos más grandes (más de 900px) */
+@media (min-width: 901px) {
+    .calculadora-grilla {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
