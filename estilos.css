@@ -1,45 +1,105 @@
+
 body {
-    padding: 0;
+    background-color: #f1f2f6;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    padding: 0;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .calculadora-grilla {
     display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
 }
 
-.calculadora-grilla > button {
-    cursor: pointer;
-    font-size: 2rem;
-    border: 1px solid white;
-    outline: none;
-    background-color: rgba(255, 255, 255, .75);
-}
-
+/* Estilos para el display */
 .output {
     grid-column: 1 / -1;
-    background-color: rgba(0, 0, 0, .75);
     display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.display {
+    width: 100%;
     padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all; 
+    font-size: 24px;
+    border: none;
+    background-color: #f1f2f6;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 5px #d4d4d4, inset -3px -3px 5px #ffffff;
 }
 
-.output .display {
-    color: black;
-    font-size: 1.85rem;
-    text-align: right;
+/* Estilos para los botones */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    background-color: #c8a2c8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #d4d4d4, -3px -3px 5px #ffffff;
+    transition: background-color 0.3s;
 }
 
-.calculadora-grilla > button:hover {
-    background-color: rgba(255, 255, 255, .9);
+button:hover {
+    background-color: #ab7fac;
+    cursor: pointer;
 }
 
+button:active {
+    background-color: #8c5e8f;
+}
+
+/* Estilos para los botones de operaciones */
+button[name="data-opera"] {
+    background-color: #6b439b;
+}
+
+button[name="data-opera"]:hover {
+    background-color: #543a77;
+}
+
+button[name="data-opera"]:active {
+    background-color: #412b5a;
+}
+
+/* Estilos para el botón de igual */
+button[name="data-igual"] {
+    background-color: #9b59b6;
+}
+
+button[name="data-igual"]:hover {
+    background-color: #844aa8;
+}
+
+button[name="data-igual"]:active {
+    background-color: #6c3b8b;
+}
+
+/* Estilos para el botón de borrar */
+button[name="data-delete"] {
+    background-color: #bdc3c7;
+    color: #333;
+}
+
+button[name="data-delete"]:hover {
+    background-color: #a5abb0;
+}
+
+button[name="data-delete"]:active {
+    background-color: #8e9499;
+}
